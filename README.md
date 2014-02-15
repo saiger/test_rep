@@ -1,5 +1,5 @@
 test_rep
 ========
-new line
+new
 
 It's my test GIT repository
