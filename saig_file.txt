@@ -1,3 +1,4 @@
 Hi all
 new entry
 second entry
+verify known files
