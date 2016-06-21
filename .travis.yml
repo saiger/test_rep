@@ -4,8 +4,14 @@ node_js:
 
 addons:
     firefox: "36.0.1"
+    
 
 before_install:
+    - export CHROME_BIN=/usr/bin/google-chrome
+    - sudo apt-get update
+    - sudo apt-get install -y libappindicator1 fonts-liberation
+    - wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+    - sudo dpkg -i google-chrome*.deb
     - export DISPLAY=:99.0
     - /sbin/start-stop-daemon --start --quiet --pidfile /tmp/custom_xvfb_99.pid --make-pidfile --background --exec /usr/bin/Xvfb -- :99 -ac -screen 0 1920x1080x16
 
@@ -14,6 +20,7 @@ install:
 
 before_script:
     - export DISPLAY=:99.0
+    - Xvfb :99 -ac &
     - sh -e /etc/init.d/xvfb start
     - sleep 3
     - nohup java -jar selenium-server-standalone-2.53.0.jar > selenium_server.log &
