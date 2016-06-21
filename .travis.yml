@@ -1,0 +1,13 @@
+language: node
+node_js:
+    - "6"
+
+install:
+    npm install webdriverio
+
+
+before_script:
+    mkdir webdriverio-test && cd webdriverio-test
+
+script:
+    ls -la
