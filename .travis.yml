@@ -6,8 +6,12 @@ install:
     npm install webdriverio
 
 
+
 before_script:
-    mkdir webdriverio-test && cd webdriverio-test
+    curl -O http://selenium-release.storage.googleapis.com/2.47/selenium-server-standalone-2.48.2.jar
+    java -jar selenium-server-standalone-2.48.2.jar
+    export DISPLAY=:0.0
+
 
 script:
-    ls -la
+    node test.js
