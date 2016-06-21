@@ -1,9 +1,11 @@
 var webdriverio = require('webdriverio');
 var options = {
 	desiredCapabilities: {
-		browserName: 'chrome'
+		browserName: 'firefox'
 	}
 };
+
+console.log('init');
 
 webdriverio
 	.remote(options)
@@ -14,3 +16,5 @@ webdriverio
 	})
 	.saveScreenshot('./test.jpg')
 	.end();
+
+console.log('finish');
