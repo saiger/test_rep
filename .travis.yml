@@ -3,7 +3,7 @@ node_js:
     - "6"
 
 install:
-    npm install webdriverio
+    - npm install webdriverio
 
 
 before_script:
@@ -16,3 +16,4 @@ before_script:
 script:
     - ps aux | grep "sele"
     - node test.js
+    - ls -la

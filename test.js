@@ -12,4 +12,5 @@ webdriverio
 	.getTitle().then(function(title) {
 		console.log('Title was: ' + title);
 	})
+	.saveScreenshot('./test.jpg')
 	.end();
