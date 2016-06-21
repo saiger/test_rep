@@ -14,5 +14,5 @@ before_script:
     - until nc -z localhost 4444; do echo Waiting for Selenium; sleep 1; done
 
 script:
-    ps aux | grep "sele"
-    node test.js
+    - ps aux | grep "sele"
+    - node test.js
