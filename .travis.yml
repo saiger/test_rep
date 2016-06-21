@@ -6,9 +6,8 @@ install:
     npm install webdriverio
 
 
-
 before_script:
-    java -jar selenium-server-standalone-2.53.0.jar
+    java -jar selenium-server-standalone-2.53.0.jar &> selenium_server.log &
     export DISPLAY=:0.0
 
 
